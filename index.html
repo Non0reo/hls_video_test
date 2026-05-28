@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>http_streaming</title>
+  </head>
+  <body>
+    <div id="app">
+
+      <!--
+        The PlayerProvider passes state between the UI components
+        and Media, and makes fully custom UIs possible.
+        It does not have layout by default (display:contents)
+      -->
+      <video-player>
+        <!--
+          Skins contain the entire player UI and are easily swappable.
+          They can each be "ejected" for full control and customization
+          of UI components.
+        -->
+        <video-skin class="hls-video">
+          <!--
+            Media are players without UIs, handling networking
+            and display of the media. They are easily swappable
+            to handle different sources.
+          -->
+          <hls-video src="https://raw.githubusercontent.com/schumijo/iptv/main/playlists/francetv/arte.m3u8" playsinline></hls-video>
+          
+        </video-skin>
+      </video-player>
+
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
