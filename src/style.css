@@ -65,6 +65,6 @@ body {
 }
 
 .hls-video {
-  width: 700px;
+  width: 1000px;
   border-image: url('https://pixijs.com/assets/nine-slice/panel-031.png') 30 fill / 30px / 10px stretch;
 }
